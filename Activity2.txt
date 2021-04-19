@@ -1,0 +1,307 @@
+1.what is the Difference between C++ and java ? 
+
+C++
+i) C++ is platform-dependent.	
+ii) C++ is mainly used for system programming.
+iii) C++ supports multiple inheritance.	
+iv) C++ supports pointers. You can write pointer program in C++.	
+v) C++ uses compiler only. C++ is compiled and run using the compiler 
+    which converts source code into machine code so, C++ is platform dependent.
+------------------------------------------------------------------------------------------------------------------
+Java
+i) Java is platform-independent.
+ii) Java is mainly used for application programming
+iii) Java doesn't support multiple inheritance through class. It can be achieved by interfaces in java.
+iv) Java supports pointer internally. However, you can't write the pointer program in java.
+     It means java has restricted pointer support in java.
+v) Java uses compiler and interpreter both. Java source code is converted into bytecode at compilation time. 
+    The interpreter executes this bytecode at runtime and produces output.
+---------------------------------------------------------------------------------------------------------------------------------------------
+2. What are the key features of java?
+First one is
+-java is Object Oriented
+-Java is an object-oriented programming language. Everything in Java is an object. 
+Object-oriented means we organize our software as a combination of different types of objects that incorporates 
+both data and behavior.
+------------------------------------------------------------------------------------------------------------------------------------------
+Simple:
+-Java language is a simple programming language because:
+
+Java syntax is based on C++ (so easier for programmers to learn it after C++).
+Java has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.
+There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Robust:
+Robust simply means strong. Java is robust because:
+ It uses strong memory management.
+ There is a lack of pointers that avoids security problems.
+ There are exception handling and the type checking mechanism in Java. All these points make Java robust.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Secured
+Java is best known for its security. With Java, we can develop virus-free systems. Java is secured because:
+
+No explicit pointer
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Platform Independent:
+Java is platform independent because it is different from other languages like C, C++, etc. 
+which are compiled into platform specific machines while Java is a write once, run anywhere language.
+ A platform is the hardware or software environment in which a program runs.
+
+Java code can be run on multiple platforms, for example, Windows, Linux, Mac/OS, etc. 
+Java code is compiled by the compiler and converted into bytecode. This bytecode is a platform-independent 
+code because it can be run on multiple platforms, i.e., Write Once and Run Anywhere(WORA).
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Portable
+Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require 
+any implementation.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+3.What is JVM ?
+-jvm stands for java virtual machine.
+-jvm is abstarct machine
+- It is a specification that provides runtime environment in which java bytecode can be executed.
+-JVMs are available for many hardware and software platforms.
+-Jvm is a platfom dependent.
+-JVM performs many tasks
+Loads code
+Verifies code
+Executes code
+Provides runtime environment
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+4.what is oops?why it called as object oriented?
+-Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. 
+  It simplifies software development and maintenance by providing some concepts:
+   -object
+   -class
+   -inheritance
+    -polymorphism
+    -abstraction
+   -encapsulation
+
+it Follows the bottom-up approach in program design.
+Focus on data with methods to operate upon the object's data
+Includes the concept like Encapsulation and abstraction which hides the complexities from the user and show only functionality.
+Implements the real-time approach like inheritance, abstraction, etc.
+The examples of the object-oriented paradigm are C++, Simula, Smalltalk, Python, C#, etc.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.what is Multiple inheritance?Explain with real time and in a programmic way?
+-Multiple Inheritance is a feature of object oriented concept, where a class can inherit properties of more 
+than one parent class. and 
+-To reduce the complexity and simplify the language, multiple inheritance is not supported in java.
+-Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same
+ method and you call it from child class object, there will be ambiguity to call the method of A or B class.
+
+-Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 
+2 classes. So whether you have same method or different, there will be compile time error.
+
+class A{  
+void msg(){System.out.println("Hello");}  
+}  
+class B{  
+void msg(){System.out.println("Welcome");}  
+}  
+class C extends A,B{//suppose if it were  
+   
+ public static void main(String args[]){  
+   C obj=new C();  
+   obj.msg();//Now which msg() method would be invoked?  
+}  
+}  
+output- Compile Time Error
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.Difference between abstract class and interface
+Abstract class:
+1) Abstract class can have abstract and non-abstract methods	
+2) Abstract class doesn't support multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.
+4) Abstract class can provide the implementation of interface.
+5) The abstract keyword is used to declare abstract class.
+7) An abstract class can be extended using keyword "extends".
+8) A Java abstract class can have class members like private, protected, etc
+Example:
+public abstract class Shape{
+public abstract void draw();
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Interface
+Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+Interface supports multiple inheritance.
+Interface has only static and final variables.
+Interface can't provide the implementation of abstract class
+The interface keyword is used to declare interface.
+An interface can be implemented using keyword "implements".
+Members of a Java interface are public by default.
+Example:
+public interface Drawable{
+void draw();
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+7.What is Encapsulation?Explain with real time example?
+-Encapsulation in Java is a process of wrapping code and data together into a single unit, for example, a capsule which is
+ mixed of several medicines.
+-Encapsulation providing only a setter or getter method, you can make the class read-only or write-only.
+-It is a way to achieve data hiding in Java because other class will not be able to access the data
+ through the private data members.
+-The encapsulate class is easy to test. So, it is better for unit testing.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.what is Polymorphism? and inheritnce?
+Polymorphism in Java is a concept by which we can perform a single action in different ways.
+-Polymorphism is derived from 2 Greek words: poly and morphs. The word "poly" means many and "morphs" means forms.
+- So polymorphism means many forms.
+-There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism. 
+-We can perform polymorphism in java by method overloading and method overriding.
+-If you overload a static method in Java, it is the example of compile time polymorphism.
+
+Inheritance:
+Inheritance is a mechanism by which one object acquires all the properties and behavior of another object of another class.
+-It is used for Code Reusability
+-The idea behind inheritance in Java is that you can create new classes that are built upon existing classes.
+-When you inherit from an existing class, you can reuse methods and fields of the parent class.
+-Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+There are five types of inheritance in Java.
+
+Single-level inheritance
+Multi-level inheritance
+Multiple Inheritance
+Hierarchical Inheritance
+Hybrid Inheritance
+Multiple inheritance is not supported in Java through class.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+9.What is Method Overriding and Method Overloading ?xplain with program?
+ -Method Overriding
+-If subclass (child class) has the same method as declared in the parent class, it is known as method 
+overriding in Java.
+-It is used for runtime polymorphism and to implement the interface methods.
+-Rules for Method overriding
+
+The method must have the same name as in the parent class.
+The method must have the same signature as in the parent class.
+Two classes must have an IS-A relationship between them.
+
+//Java Program to illustrate the use of Java Method Overriding  
+//Creating a parent class.  
+class Vehicle{  
+  //defining a method  
+  void run(){System.out.println("Vehicle is running");}  
+}  
+//Creating a child class  
+class Bike2 extends Vehicle{  
+  //defining the same method as in the parent class  
+  void run(){System.out.println("Bike is running safely");}  
+  
+  public static void main(String args[]){  
+  Bike2 obj = new Bike2();//creating object  
+  obj.run();//calling method  
+  }  
+}  
+
+Bike is running safely
+---------------------------------------------------------------------------------------------------------------------------------------------
+Method Overloading
+Method overloading is the polymorphism technique which allows us to create multiple methods with the same name
+ but different signature. We can achieve method overloading in two ways.
+
+By Changing the number of arguments
+By Changing the data type of arguments
+
+1) Method Overloading: changing no. of arguments
+In this example, we have created two methods, first add() method performs addition of two numbers and second add method performs addition of three numbers.
+
+In this example, we are creating static methods so that we don't need to create instance for calling methods.
+
+class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+class TestOverloading1{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(11,11,11));  
+}}  
+
+2) Method Overloading: changing data type of arguments
+In this example, we have created two methods that differs in data type. The first add method receives two
+ integer arguments and second add method receives two double arguments.
+
+class Adder{  
+static int add(int a, int b){return a+b;}  
+static double add(double a, double b){return a+b;}  
+}  
+class TestOverloading2{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(12.3,12.6));  
+}}  
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.what is collection?what's its need? if we are having array?
+-The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+-Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, 
+  manipulation, and deletion.
+-Java Collection means a single unit of objects. Java Collection framework provides many
+ interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.diffrence between array and arraylist? any programmetical difference?
+Array
+i)An array is a dynamically-created object.It has a contiguous memory location.
+ii)Array is static in size.	
+iii)An array is a fixed-length data structure.	
+iv)An array can store both objects and primitives type.	
+v)Array can be multi-dimensional.	
+vi)We use for loop or for each loop to iterate over an array.
+--------------------------------------------------------------------------------------------------------------------------
+ArrayList
+i)The ArrayList is a class of Java Collections framework. It contains popular classes like Vector, HashTable, and HashMap.
+ii)ArrayList is dynamic in size.
+iii)ArrayList is a variable-length data structure.
+iv)We cannot store primitive type in ArrayList. It automatically converts primitive type to object.
+v)ArrayList is always single-dimensional.
+vi)We use an iterator to iterate over ArrayList.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.Explain Exception handling and how it is handled?
+The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors 
+so that normal flow of the application can be maintained.
+
+The try-catch is the simplest method of handling exceptions. Put the code you want to run in the try block, and any exceptions that the 
+code throws are caught by one or more catch blocks.
+
+This method will catch any type of exceptions that get thrown. This is the simplest mechanism for handling exceptions.
+try {
+} catch(Exception ex)
+{
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------
+14.What is garbage collection?
+-In java, garbage means unreferenced objects.
+-To do so, we were using free() function in C language and delete() in C++. But, in java 
+ it is performed automatically. So, java provides better memory management.
+-It makes java memory efficient because garbage collector removes the unreferenced objects from heap memory.
+It is automatically done by the garbage collector(a part of JVM) so we don't need to make extra efforts.
+
+How can an object be unreferenced?
+There are many ways:
+
+By nulling the reference
+By assigning a reference to another
+By anonymous object etc.
+--------------------------------------------------------------------------------------------------------------------------------------------
+15.Explain Public static void main()?
+
+Public: It is an Access modifier, which specifies from where and who can access the method. 
+Making the main() method public makes it globally available. It is made public so that JVM can invoke it from outside the class 
+as it is not present in the current class.
+
+Static: It is a keyword which is when associated with a method, makes it a class related method. The main() method is static so that 
+JVM can invoke it without instantiating the class. This also saves the unnecessary wastage of memory which would have been used by
+ the object declared only for calling the main() method by the JVM.
+
+Void: It is a keyword and used to specify that a method doesn’t return anything. As main() method doesn’t return anything, its return type is void. 
+As soon as the main() method terminates, the java program terminates too. Hence, it doesn’t make any sense to return from main() method as 
+JVM can’t do anything with the return value of it.
+
+main: It is the name of Java main method. It is the identifier that the JVM looks for as the starting point of the java program. It’s not a keyword.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20.what is RestApi?Have you used it in your project? and explain how you used it?
+Spring RestController annotation is used to create RESTful web services using Spring MVC. Spring RestController takes care of mapping 
+request data to the defined request handler method. Once response body is generated from the handler method, it converts it to JSON or XML response. 
